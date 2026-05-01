@@ -1,0 +1,143 @@
+:root {
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f5f2ea;
+  background:
+    radial-gradient(circle at top, rgba(255, 186, 73, 0.22), transparent 32%),
+    linear-gradient(180deg, #17303a 0%, #091318 72%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+  padding: 4rem;
+}
+
+.hero,
+.panel {
+  border: 1px solid rgba(245, 242, 234, 0.15);
+  background: rgba(4, 10, 14, 0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+  padding: 4rem;
+  align-content: center;
+}
+
+.eyebrow,
+.panel-label {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: #f3bb62;
+}
+
+.hero h1,
+.panel h2 {
+  margin: 0;
+  line-height: 0.95;
+}
+
+.hero h1 {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  max-width: 8ch;
+}
+
+.summary {
+  max-width: 34rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.15rem;
+  color: rgba(245, 242, 234, 0.82);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.35rem;
+  background: #f3bb62;
+  color: #12222a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.actions .secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f2ea;
+  border: 1px solid rgba(245, 242, 234, 0.16);
+}
+
+.panel {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panel h2 {
+  margin-top: 0.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.system-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.system-list li {
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(245, 242, 234, 0.1);
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .hero,
+  .panel {
+    padding: 1.5rem;
+  }
+}
