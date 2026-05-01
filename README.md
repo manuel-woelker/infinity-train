@@ -9,6 +9,12 @@ pnpm install
 pnpm dev
 ```
 
+## Deployment
+
+The site is deployed to GitHub Pages via [.github/workflows/deploy-pages.yml](/data/projects/infinity-train/.github/workflows/deploy-pages.yml).
+
+In the repository settings, set `Pages -> Source` to `GitHub Actions`.
+
 Ideas:
 
 - Collect resources
