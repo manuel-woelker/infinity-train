@@ -1,0 +1,16 @@
+/.idea
+/.nao/*
+!/.nao/.gitignore
+!/.nao/nao.kdl
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+.direnv
+/.cache
+/.codex
+/.cqs
+node_modules
+dist
+build
+coverage
+.DS_Store

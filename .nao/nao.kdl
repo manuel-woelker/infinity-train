@@ -1,0 +1,60 @@
+recipe "default" {
+  task "build" description="Run the configured build command" {
+    run shell="""
+      if [[ -n "${INFINITY_TRAIN_BUILD_CMD:-}" ]]; then
+        eval "$INFINITY_TRAIN_BUILD_CMD"
+      else
+        printf 'Skipping build: set INFINITY_TRAIN_BUILD_CMD to enable this task.\n'
+      fi
+    """
+  }
+
+  task "fmt" description="Run the configured formatting command" {
+    run shell="""
+      if [[ -n "${INFINITY_TRAIN_FORMAT_CMD:-}" ]]; then
+        eval "$INFINITY_TRAIN_FORMAT_CMD"
+      else
+        printf 'Skipping format: set INFINITY_TRAIN_FORMAT_CMD to enable this task.\n'
+      fi
+    """
+  }
+
+  task "lint" description="Run the configured lint command" {
+    run shell="""
+      if [[ -n "${INFINITY_TRAIN_LINT_CMD:-}" ]]; then
+        eval "$INFINITY_TRAIN_LINT_CMD"
+      else
+        printf 'Skipping lint: set INFINITY_TRAIN_LINT_CMD to enable this task.\n'
+      fi
+    """
+  }
+
+  task "test" description="Run the configured test command" {
+    run shell="""
+      if [[ -n "${INFINITY_TRAIN_TEST_CMD:-}" ]]; then
+        eval "$INFINITY_TRAIN_TEST_CMD"
+      else
+        printf 'Skipping test: set INFINITY_TRAIN_TEST_CMD to enable this task.\n'
+      fi
+    """
+  }
+
+  task "check" description="Run repository verification tasks" {
+    depends-on "fmt"
+    depends-on "lint"
+    depends-on "test"
+    run shell="""
+      if [[ -n "${INFINITY_TRAIN_BUILD_CMD:-}" ]]; then
+        eval "$INFINITY_TRAIN_BUILD_CMD"
+      else
+        printf 'Skipping build during check: set INFINITY_TRAIN_BUILD_CMD to enable it.\n'
+      fi
+
+      printf 'Repository verification completed.\n'
+    """
+  }
+
+  task "check-code" description="Run the timed repository verification script" {
+    run script="./scripts/check-code.sh"
+  }
+}
