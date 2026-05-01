@@ -6,7 +6,7 @@ This file provides guidance to human developers and AI agents when working with 
 
 `infinity-train` is currently a greenfield project. Favor infrastructure and implementation choices that keep the repository easy to evolve as the product direction becomes clearer.
 
-Note: All developer documentation should be written in English.
+Note: All user-facing text and end-user documentation should be written in German. This includes the UI, onboarding copy, landing-page text, and `README.md`.
 
 ## Documentation strategy
 

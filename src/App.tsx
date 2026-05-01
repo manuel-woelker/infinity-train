@@ -1,32 +1,32 @@
 const systems = [
-  "Collect salvage from derailed cargo",
-  "Upgrade train cars between runs",
-  "Lay track through unstable terrain",
-  "Repair bridges before the storm hits",
+  "Brauchbare Teile aus entgleisten Waggons bergen",
+  "Zugwaggons zwischen den Durchläufen aufrüsten",
+  "Gleise durch instabiles Gelände verlegen",
+  "Brücken reparieren, bevor der Sturm eintrifft",
 ];
 
 export default function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-        <p className="eyebrow">Roguelike rail management</p>
+        <p className="eyebrow">Roguelike-Zugmanagement</p>
         <h1>Infinity Train</h1>
         <p className="summary">
-          Build a stubborn little train into a rolling fortress. Scavenge, expand, and keep the line
-          alive one dangerous stretch at a time.
+          Baue einen störrischen kleinen Zug zu einer rollenden Festung aus. Plündere, erweitere und
+          halte die Strecke Abschnitt für Abschnitt am Leben.
         </p>
         <div className="actions">
-          <button type="button">Start Prototype</button>
+          <button type="button">Prototyp starten</button>
           <button type="button" className="secondary">
-            View Systems
+            Systeme ansehen
           </button>
         </div>
       </section>
 
       <section className="panel">
         <div>
-          <p className="panel-label">Current direction</p>
-          <h2>First playable pillars</h2>
+          <p className="panel-label">Aktuelle Richtung</p>
+          <h2>Erste spielbare Säulen</h2>
         </div>
         <ul className="system-list">
           {systems.map((system) => (

@@ -1,8 +1,8 @@
 # Infinity Train
 
-A roguelike train game
+Ein Roguelike-Zugspiel
 
-## Development
+## Entwicklung
 
 ```bash
 pnpm install
@@ -11,15 +11,15 @@ pnpm dev
 
 ## Deployment
 
-The site is deployed to GitHub Pages via [.github/workflows/deploy-pages.yml](/data/projects/infinity-train/.github/workflows/deploy-pages.yml).
+Die Seite wird per GitHub Pages über [deploy-pages.yml](/data/projects/infinity-train/.github/workflows/deploy-pages.yml) veröffentlicht.
 
-In the repository settings, set `Pages -> Source` to `GitHub Actions`.
+Stelle in den Repository-Einstellungen `Pages -> Source` auf `GitHub Actions`.
 
-Ideas:
+Ideen:
 
-- Collect resources
-- Upgrade train
-- Build tracks
-- Build train stations and other train infrastructure
-- Repair bridges
-- Remove obstacles
+- Ressourcen sammeln
+- Den Zug aufrüsten
+- Gleise bauen
+- Bahnhöfe und andere Zug-Infrastruktur errichten
+- Brücken reparieren
+- Hindernisse beseitigen
